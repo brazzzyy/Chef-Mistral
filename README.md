@@ -1,4 +1,4 @@
-readme_content = """# 👨‍🍳 Chef Mistral
+# 👨‍🍳 Chef Mistral
 
 **Chef Mistral** is a React web app that lets users input ingredients they have on hand and receive a customized recipe powered by the [Mistral model](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) via the Hugging Face Inference API.
 
@@ -15,26 +15,23 @@ The app uses Hugging Face's `@huggingface/inference` JS library to query the **M
 
 ## 📁 Project Structure
 
+```
 .
 ├── public/
-│ └── assets/
-│ └── chef.png
+│   └── assets/
+│       └── chef.png
 ├── src/
-│ ├── components/
-│ │ ├── Header.jsx
-│ │ ├── Main.jsx
-│ │ ├── List.jsx
-│ │ └── Recipe.jsx
-│ ├── App.js
-│ ├── index.js
-│ ├── ai.js
-│ ├── App.css
-│ └── index.css
-
-bash
-Always show details
-
-Copy
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Main.jsx
+│   │   ├── List.jsx
+│   │   └── Recipe.jsx
+│   ├── App.js
+│   ├── index.js
+│   ├── ai.js
+│   ├── App.css
+│   └── index.css
+```
 
 ## 🛠️ Setup Instructions
 
@@ -42,69 +39,56 @@ Copy
    ```bash
    git clone https://github.com/your-username/chef-mistral.git
    cd chef-mistral
-Install dependencies
+   ```
 
-bash
-Always show details
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Copy
-npm install
-Set up environment variables
+3. **Set up environment variables**
 
-Create a .env file in the root directory with your Hugging Face Inference API key:
+   Create a `.env` file in the root directory with your Hugging Face Inference API key:
 
-bash
-Always show details
+   ```bash
+   REACT_APP_API_KEY=your_huggingface_api_key_here
+   ```
 
-Copy
-REACT_APP_API_KEY=your_huggingface_api_key_here
-You can get your key from https://huggingface.co/settings/tokens
+   You can get your key from https://huggingface.co/settings/tokens
 
-Run the app
+4. **Run the app**
+   ```bash
+   npm start
+   ```
 
-bash
-Always show details
+   App will be available at `http://localhost:3000`
 
-Copy
-npm start
-App will be available at http://localhost:3000
+## ✨ Example Usage
 
-✨ Example Usage
-Enter ingredients like chicken, onion, corn
+1. Enter ingredients like `chicken`, `onion`, `corn`
+2. Click "Add Ingredient"
+3. Once 4+ ingredients are added, a button will appear
+4. Click **Get Recipe** and wait for AI-generated markdown output
+5. Enjoy your custom recipe!
 
-Click "Add Ingredient"
+## 📦 Dependencies
 
-Once 4+ ingredients are added, a button will appear
+- React
+- @huggingface/inference
+- react-markdown
 
-Click Get Recipe and wait for AI-generated markdown output
+## 💡 Future Enhancements
 
-Enjoy your custom recipe!
+- Ingredient auto-suggestions
+- Saving favorite recipes
+- Editable markdown viewer
+- Image rendering from recipe steps (via another AI model)
 
-📦 Dependencies
-React
+## 🧑‍💻 Author
 
-@huggingface/inference
-
-react-markdown
-
-💡 Future Enhancements
-Ingredient auto-suggestions
-
-Saving favorite recipes
-
-Editable markdown viewer
-
-Image rendering from recipe steps (via another AI model)
-
-🧑‍💻 Author
-Brady Lor
+**Brady Lor**  
 Built with ❤️ and Mistral AI
 
-📄 License
-This project is licensed under the MIT License. See the LICENSE file for more info.
-"""
+## 📄 License
 
-readme_path = Path("/mnt/data/README.md")
-readme_path.write_text(readme_content)
-
-readme_path.name
+This project is licensed under the MIT License. See the `LICENSE` file for more info.
