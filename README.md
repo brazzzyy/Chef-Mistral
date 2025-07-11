@@ -1,19 +1,19 @@
-# 👨‍🍳 Chef Mistral
+# Chef Mistral
 
 **Chef Mistral** is a React web app that lets users input ingredients they have on hand and receive a customized recipe powered by the [Mistral model](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) via the Hugging Face Inference API.
 
-## 🚀 Features
+## Features
 
 - Add multiple ingredients to a list
 - Generate a recipe using AI (does not require exact ingredient matches)
 - Renders recipes in beautiful markdown format
 - Clean, component-based React architecture
 
-## 🧠 How It Works
+## How It Works
 
 The app uses Hugging Face's `@huggingface/inference` JS library to query the **Mixtral-8x7B-Instruct** model with a list of ingredients. The model responds with a recipe in markdown format which is displayed in the UI.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -33,7 +33,7 @@ The app uses Hugging Face's `@huggingface/inference` JS library to query the **M
 │   └── index.css
 ```
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 1. **Clone the repository**
    ```bash
@@ -63,32 +63,8 @@ The app uses Hugging Face's `@huggingface/inference` JS library to query the **M
 
    App will be available at `http://localhost:3000`
 
-## ✨ Example Usage
-
-1. Enter ingredients like `chicken`, `onion`, `corn`
-2. Click "Add Ingredient"
-3. Once 4+ ingredients are added, a button will appear
-4. Click **Get Recipe** and wait for AI-generated markdown output
-5. Enjoy your custom recipe!
-
-## 📦 Dependencies
+## Dependencies
 
 - React
 - @huggingface/inference
 - react-markdown
-
-## 💡 Future Enhancements
-
-- Ingredient auto-suggestions
-- Saving favorite recipes
-- Editable markdown viewer
-- Image rendering from recipe steps (via another AI model)
-
-## 🧑‍💻 Author
-
-**Brady Lor**  
-Built with ❤️ and Mistral AI
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more info.
