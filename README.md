@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+readme_content = """# 👨‍🍳 Chef Mistral
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Chef Mistral** is a React web app that lets users input ingredients they have on hand and receive a customized recipe powered by the [Mistral model](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) via the Hugging Face Inference API.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Add multiple ingredients to a list
+- Generate a recipe using AI (does not require exact ingredient matches)
+- Renders recipes in beautiful markdown format
+- Clean, component-based React architecture
 
-### `npm start`
+## 🧠 How It Works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app uses Hugging Face's `@huggingface/inference` JS library to query the **Mixtral-8x7B-Instruct** model with a list of ingredients. The model responds with a recipe in markdown format which is displayed in the UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+.
+├── public/
+│ └── assets/
+│ └── chef.png
+├── src/
+│ ├── components/
+│ │ ├── Header.jsx
+│ │ ├── Main.jsx
+│ │ ├── List.jsx
+│ │ └── Recipe.jsx
+│ ├── App.js
+│ ├── index.js
+│ ├── ai.js
+│ ├── App.css
+│ └── index.css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Always show details
 
-### `npm run build`
+Copy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Setup Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/chef-mistral.git
+   cd chef-mistral
+Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Always show details
 
-### `npm run eject`
+Copy
+npm install
+Set up environment variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a .env file in the root directory with your Hugging Face Inference API key:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Always show details
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Copy
+REACT_APP_API_KEY=your_huggingface_api_key_here
+You can get your key from https://huggingface.co/settings/tokens
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the app
 
-## Learn More
+bash
+Always show details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Copy
+npm start
+App will be available at http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✨ Example Usage
+Enter ingredients like chicken, onion, corn
 
-### Code Splitting
+Click "Add Ingredient"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once 4+ ingredients are added, a button will appear
 
-### Analyzing the Bundle Size
+Click Get Recipe and wait for AI-generated markdown output
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Enjoy your custom recipe!
 
-### Making a Progressive Web App
+📦 Dependencies
+React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+@huggingface/inference
 
-### Advanced Configuration
+react-markdown
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+💡 Future Enhancements
+Ingredient auto-suggestions
 
-### Deployment
+Saving favorite recipes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Editable markdown viewer
 
-### `npm run build` fails to minify
+Image rendering from recipe steps (via another AI model)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🧑‍💻 Author
+Brady Lor
+Built with ❤️ and Mistral AI
+
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for more info.
+"""
+
+readme_path = Path("/mnt/data/README.md")
+readme_path.write_text(readme_content)
+
+readme_path.name
