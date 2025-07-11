@@ -11,27 +11,7 @@
 
 ## How It Works
 
-The app uses Hugging Face's `@huggingface/inference` JS library to query the **Mixtral-8x7B-Instruct** model with a list of ingredients. The model responds with a recipe in markdown format which is displayed in the UI.
-
-## Project Structure
-
-```
-.
-├── public/
-│   └── assets/
-│       └── chef.png
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── Main.jsx
-│   │   ├── List.jsx
-│   │   └── Recipe.jsx
-│   ├── App.js
-│   ├── index.js
-│   ├── ai.js
-│   ├── App.css
-│   └── index.css
-```
+Enter in your choice of ingredients and send the ingredients via button, in an array list, over to Mistral AI to receive a recipe generated from it. This project uses Hugging Face's JS library to query Mixtral-8x7B-Instruct model with the ingredients data. The LLM then responds with a recipe formatted in markdown synthax which is then parsed into HTML content.
 
 ## Setup Instructions
 
